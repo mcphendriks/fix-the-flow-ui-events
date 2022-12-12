@@ -14,7 +14,7 @@
 body {
   margin: 2rem;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   background: var(--secondary);
 }
@@ -77,5 +77,42 @@ a:nth-of-type(12) {
     transform: scale(1, 1) translateY(0);
   }
 }
+/* Slow in slow out by Mouse scroll event type(19) */
+a:nth-of-type(20) {
+  position: relative;
+  background-color: #ffa500;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
 
-/* Jouw animaties */
+/* squat-stretch on dubble click type(20) */
+
+a:nth-of-type(20) {
+  position: relative;
+  background-color: #ffa500;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.squat-stretch {
+  animation-name: squat-stretch;
+  animation-duration: 1.4s;
+  animation-iteration-count: 2;
+}
+
+@keyframes squat-stretch {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  10% {
+    width: 60px;
+    height: 120px;
+  }
+
+  50% {
+    width: 120px;
+    height: 60px;
+    transform: translateY(-150px);
+  }
+}
