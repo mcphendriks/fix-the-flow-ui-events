@@ -77,12 +77,33 @@ a:nth-of-type(12) {
     transform: scale(1, 1) translateY(0);
   }
 }
-/* Slow in slow out by Mouse scroll event type(19) */
-a:nth-of-type(20) {
+/* Interaction by mouse over (19) */
+a:nth-of-type(19) {
   position: relative;
-  background-color: #ffa500;
+  background-color: #df6edf;
   color: var(--secondary);
   border-color: var(--secondary);
+}
+
+.mouse-over {
+  animation-name: blow-up;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2sec;
+  animation-iteration-count: 1;
+}
+
+@keyframes blow-up {
+  0% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(3);
+  }
 }
 
 /* squat-stretch on dubble click type(20) */
