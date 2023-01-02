@@ -77,6 +77,58 @@ a:nth-of-type(12) {
     transform: scale(1, 1) translateY(0);
   }
 }
+
+/* Interaction (17) */
+a:nth-of-type(17) {
+  position: relative;
+  background-color: #4c43c6;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+    background-color: lightblue;
+  }
+}
+
+/* Interaction  mouse enter (18) */
+a:nth-of-type(18) {
+  position: relative;
+  background-color: #26aa31;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.slide-left {
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-left {
+  0% {
+    top: 0em;
+    left: 0em;
+  }
+
+  25% {
+    top: 0em;
+    left: 2em;
+  }
+}
+
 /* Interaction by mouse over (19) */
 a:nth-of-type(19) {
   position: relative;
@@ -87,22 +139,24 @@ a:nth-of-type(19) {
 
 .mouse-over {
   animation-name: blow-up;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 2sec;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
 @keyframes blow-up {
   0% {
-    transform: scale(1);
+    transform: translateY(-50px);
   }
 
-  80% {
-    transform: scale(2);
+  10% {
+    width: 60px;
+    height: 120px;
   }
 
-  100% {
-    transform: scale(3);
+  50% {
+    width: 120px;
+    height: 60px;
+    transform: translateY(-150px);
   }
 }
 
