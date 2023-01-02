@@ -21,5 +21,22 @@ function squatHandler() {
   code.classList.toggle('squat-stretch')
 }
 
+// Interaction ease-in-out by mouse over (19)
+
+let navigation = document.querySelector('a:nth-of-type(19)')
+
+navigation.addEventListener('mouseover', hovered, false)
+navigation.addEventListener('mouseout', hoveredOut, false)
+
+console.log(navigation)
+
+function hovered () {
+  navigation.classList.toggle('ease-in-out')
+}
+
+function hoveredOut() {
+  navigation.classList.toggle('ease-in-out')
+}
+
 
 
