@@ -9,6 +9,30 @@ function jumpHandler() {
   interaction.classList.toggle('jump')
 }
 
+// Interaction (15)
+
+
+
+
+
+
+//Interaction Key-up event & key-down (16)//
+
+let feedForward = document.querySelector('a:nth-of-type(16)')
+
+console.log(feedForward)
+
+feedForward.addEventListener('keydown', keydownhandler)
+feedForward.addEventListener('keyup', keyuphandler)
+
+function keyuphandler () {
+  feedForward.classList.toggle('key-up')
+}
+
+function keydownhandler() {
+  feedForward.classList.toggle('key-down')
+}
+
 // interaction rotate by keypress (17)
 let labels = document.querySelector('a:nth-of-type(17)')
 
